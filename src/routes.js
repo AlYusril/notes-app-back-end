@@ -4,7 +4,7 @@ const routes =[
         method: 'POST',
         path:'/notes',
         handler: addNoteHandler,
-        Option: {
+        options: {
             cors : {
                 origin:["*"],
             },
