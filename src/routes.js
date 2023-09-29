@@ -1,4 +1,4 @@
-const{addNoteHandler} = require('./handler');
+const{addNoteHandler, editNoteByIdHandler} = require('./handler');
 const routes =[
     {
         method: 'POST',
@@ -10,6 +10,10 @@ const routes =[
             },
         },
     },
-
+    {
+        method: 'PUT',
+        path: '/notes/{id}',
+        handler:  editNoteByIdHandler,
+    },
 ];
 module.exports = routes;
