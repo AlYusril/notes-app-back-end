@@ -39,6 +39,13 @@ const addNoteHandler = (request, h) => {
     return response;
 };
 
+const getAllNotesHandler = () => ({
+  status: 'success',
+  data: {
+    notes,
+  },
+});
+
 const editNoteByIdHandler = (request, h) => {
     const { id } = request.params;
    
@@ -71,4 +78,4 @@ const editNoteByIdHandler = (request, h) => {
     response.code(404);
     return response;
   };
-module.exports = {addNoteHandler, editNoteByIdHandler};
+module.exports = {addNoteHandler, getAllNotesHandler, editNoteByIdHandler};
