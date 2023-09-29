@@ -5,7 +5,7 @@ const addNoteHandler = (request, h) => {
     const {title, tags, body} = request.payload;
     const id = nanoid(16);
     const createdAt = new Date().toISOString();
-    const updateAt = createdAt;
+    const updatedAt = createdAt;
 
     const newNote = {
         title,
@@ -13,7 +13,7 @@ const addNoteHandler = (request, h) => {
         body,
         id,
         createdAt,
-        updateAt,
+        updatedAt,
     };
 
     notes.push(newNote);
